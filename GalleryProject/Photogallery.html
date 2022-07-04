@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+        @media (max-width: 800px){
+            .column{
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        @media (max-width: 600px){
+            .column{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+    <div class="row">
+        <div class="column">
+            <img src="tommy-lisbin-xr-y6Ruw7K8-unsplash.jpg" alt="" width="100%">
+            <img src="gijs-coolen-6RQoAUgUJy0-unsplash.jpg" alt="" width="100%">
+        </div>
+        <div class="column">
+            <img src="ahmed-saeed-3oY6iqvc2sg-unsplash.jpg" alt="" width="100%">
+            <img src="cristina-gottardi-KX_214Qr7Ko-unsplash.jpg" alt="" width="100%">
+        </div>
+        <div class="column">
+            <img src="rohan-4BdKONZyg7I-unsplash.jpg" alt="" width="100%">
+            <img src="rohan-Fiq-gmcq_V8-unsplash.jpg" alt="" width="100%">
+            <img src="rohan-gG5yCUj2gCw-unsplash.jpg" alt="" width="100%">
+            
+        </div>
+        <div class="column">
+            <img src="revolt-MCRCX_b3l-s-unsplash.jpg" alt="" width="100%">
+            <img src="harley-davidson-QD6GvrDFPAA-unsplash.jpg" alt="" width="100%">
+            <img src="rohan-gG5yCUj2gCw-unsplash.jpg" alt="" width="100%">
+            <img src="egor-vikhrev-dXCu2nSI5vM-unsplash.jpg" alt="" width="100%">
+        </div>
+    
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="jia-ye-pOIRTfwdna4-unsplash.jpg" alt="" width="100%">
+            <img src="motoculturel-lX_Walm1Bps-unsplash.jpg" alt="" width="100%">
+            <img src="luca-bravo-hFzIoD0F_i8-unsplash.jpg" alt="" width="100%">
+        </div>
+        <div class="column">
+            <img src="aejaz-memon-qKwf4c4BAOA-unsplash.jpg" alt="" width="100%">
+            <img src="fabio-spinelli-cPpmFa1OiGU-unsplash.jpg" alt="" width="100%">
+        </div>
+        <div class="column">
+            <img src="arthur-edelmans-8LLbQuaR8lA-unsplash.jpg" alt="" width="100%">
+            <img src="arthur-edelmans-YiZ_C5H0x5Y-unsplash.jpg" alt="" width="100%">
+        </div>
+        <div class="column">
+            <img src="tommy-lisbin-xr-y6Ruw7K8-unsplash.jpg" alt="" width="100%">
+            <img src="gijs-coolen-6RQoAUgUJy0-unsplash.jpg" alt="" width="100%">
+        </div>
+    </div>
+</body>
+
+</html>
