@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable-List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        input{
+            width: 35em;
+            height: 2.3em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My List</h1>
+        <input type="text" id="filterInput" placeholder="Search names...">
+        <ul id="names" class="list-group">
+            <li class="collection-header">
+                <h2>A</h2>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Aryan</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Ash</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Adam</a>
+            </li>
+            <li class="collection-header">
+                <h2>B</h2>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Bret</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Brad</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Bob</a>
+            </li>
+            <li class="collection-header">
+                <h2>C</h2>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Cathy</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Carrie</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Cat</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        let filterInput = document.getElementById('filterInput');
+        filterInput.addEventListener('keyup',filterNames)
+        function filterNames(){
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            let ul = document.getElementById('names');
+            let li = ul.querySelectorAll('li.list-group-item');
+            for(let i = 0; i < li.length; i++){
+                let a = li[i].getElementsByTagName('a')[0];
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    li[i].style.display = '';
+                } 
+                else {
+                    li[i].style.display = 'none';
+                }
+            }
+
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
